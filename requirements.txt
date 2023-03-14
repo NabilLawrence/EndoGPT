@@ -50,3 +50,6 @@ google-cloud-storage
 db-dtypes
 umap-learn==0.5.3
 pyarrow
+
+streamlit
+fastapi
