@@ -334,14 +334,12 @@ def classifier_fake_real(csv_file_fake,csv_file_real):
 
 
 def single_text(custom_sentence):
-    filename = 'finalized_model.sav'
+    filename = 'model.pkl'
     loaded_model = pickle.load(open(filename, 'rb'))
     tokenizer = AutoTokenizer.from_pretrained("dmis-lab/biobert-v1.1")
     model = AutoModel.from_pretrained("dmis-lab/biobert-v1.1", num_labels=2)
     #-----------------------------------------------------
     inputs = tokenizer(custom_sentence, return_tensors="pt")
-    #-----------------------------------------------------
-    labels = ['Real medical report','Fake medical report']
     #-----------------------------------------------------
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     inputs = {k:v.to(device) for k,v in inputs.items()}
@@ -351,3 +349,4 @@ def single_text(custom_sentence):
     #-----------------------------------------------------
     preds_prob = loaded_model.predict_proba(np.array(outputs.last_hidden_state[:,0].cpu().numpy()))
     return preds_prob[0][0]
+
