@@ -37,7 +37,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 #----------------------------------------------------------
 import datasets # to create a dictionary of datasets.
 import torch #The torch module provides support for multi-dimensional arrays called tensors.
-from umap import UMAP #Uniform Manifold Approximation and Projection
+#from umap import UMAP #Uniform Manifold Approximation and Projection
 # is a machine learning technique for dimensionality reduction, which is commonly
 # used for visualizing high-dimensional data in two or three dimensions.
 #----------------------------------------------------------
@@ -199,17 +199,17 @@ def extracting_real(df):
     return df_extracted
 
 #--------------------------------------------------------------------
-def preprocess_real():
-    real = pd.read_csv("../data/real.csv")
+def preprocess_real(real):
+    #real = pd.read_csv(string)
     real = cleaning_real(real)
     real = extracting_real(real)
-    real.to_csv('../data/real_preprocessed.csv')
+    #real.to_csv('/data/real_preprocessed.csv')
     return real
 
 #--------------------------------------------------------------------
-def preprocess_synthetic():
-    synthetic = pd.read_csv("../data/synthetic.csv")
+def preprocess_synthetic(synthetic):
+    #synthetic = pd.read_csv(string)
     synthetic = cleaning_synthetic(synthetic)
-    synthetic.to_csv('../data/synthetic_preprocessed.csv')
+    #synthetic.to_csv('/data/synthetic_preprocessed.csv')
     return synthetic
 #--------------------------------------------------------------------
