@@ -92,7 +92,7 @@ from PIL import Image
 
 
 
-st.write(os.getcwd())
+#st.write(os.getcwd())
 
 #Logo_Path = os.path.abspath("website/app/Logo.png")
 
@@ -106,7 +106,7 @@ st.image(image, width=300)
 st.markdown("""# EndoGP-T
     by Open Medicine""")
 
-st.markdown("#### Please generate a medical report")
+st.markdown("#### Please generate a medical report ")
 
 search_input = ""
 
