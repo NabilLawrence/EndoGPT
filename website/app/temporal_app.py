@@ -206,11 +206,14 @@ def predict(input1):
     # Return the results to the output box
     st.markdown("#### The chances of your text being an *endoscopic medical report* are:")
 
-    st.markdown('#### '+ ':green['+str(round(prediction*100,2))+'%]')
+
 
     if prediction>0.8:
+        st.markdown('#### '+ ':green['+str(round(prediction*100,2))+'%]')
         st.markdown('#### Your text :green[is probably] a medical report 👍🎈')
+        st.balloons()
     else:
+        st.markdown('#### '+ ':red['+str(round(prediction*100,2))+'%]')
         st.markdown('#### Your text :red[probably is not] a medical report 😔')
 
 if button_clicked:
