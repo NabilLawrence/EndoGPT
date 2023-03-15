@@ -171,6 +171,7 @@ with st.form("text_form"):
 
 #gen_text='error'
 if data:
+    st.balloons()
     gen_text = data[0]["generated_text"]
 
     html_str = f"""
