@@ -202,20 +202,21 @@ def predict(input1):
     # Return the results to the output box
     st.markdown("#### The chances of your text being an *endoscopic medical report* are:")
 
-    st.markdown('#### '+ ':green['+str(round(prediction*100,2))+'%]')
-
     if prediction>0.8:
+        st.markdown('#### '+ ':green['+str(round(prediction*100,2))+'%]')
         st.markdown('#### Your text :green[is probably] a medical report 👍🎈')
+        st.balloons()
     else:
+        st.markdown('#### '+ ':red['+str(round(prediction*100,2))+'%]')
         st.markdown('#### Your text :red[probably is not] a medical report 😔')
 
 
-
 if button_clicked:
-    line='werqergwthasdafasfasfasfasfasfejty'
     st.markdown('Checking the following text:')
-    #st.markdown(session_state.my_variable)
+    st.markdown(session_state.my_variable)
     hospital_reg = r"\.*FINDINGS:.*"
+    #line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
+    #predict(line)
     line = session_state.my_variable
     if (re.findall(hospital_reg,session_state.my_variable )):
         line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
