@@ -93,11 +93,11 @@ from PIL import Image
 
 st.write(os.getcwd())
 
-Logo_Path = os.path.abspath("/website/app/Logo.png")
+#Logo_Path = os.path.abspath("website/app/Logo.png")
 
-st.write(Logo_Path)
+#st.write(Logo_Path)
 
-image = Image.open(Logo_Path)
+image = Image.open("website/app/Logo.png")
 #image = Image.open('../images/Logo.png')
 
 st.image(image, width=300)
