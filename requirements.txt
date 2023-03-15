@@ -54,3 +54,4 @@ pyarrow
 streamlit
 fastapi
 uvicorn[standard]
+streamlit-ace
