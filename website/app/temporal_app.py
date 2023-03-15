@@ -95,7 +95,7 @@ from PIL import Image
 #-------------------------------------------------------------------------------
 st.markdown("---")
 
-st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
+#st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 
 #st.write(os.getcwd())
@@ -106,19 +106,31 @@ st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsaf
 
 st.markdown("---")
 #-------------------------------------------------------------------------------
+# Title
+#-------------------------------------------------------------------------------
+# st.markdown("---")
+
+# st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
+
+# st.markdown("---")
+#-------------------------------------------------------------------------------
 image = Image.open("website/app/Logo.png")
 #image = Image.open('../images/Logo.png')
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    st.write(' ')
+    st.write('')
+
+    st.write('')
+
+    st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 with col2:
     st.image(image, width=200)
 
-with col3:
-    st.write(' ')
+#with col3:
+#    st.write(' ')
 st.markdown("---")
 #-------------------------------------------------------------------------------
 

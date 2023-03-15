@@ -89,29 +89,33 @@ mr_bean = None
 html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"</iframe>'
 
 from PIL import Image
-
+st.markdown("---")
 #-------------------------------------------------------------------------------
 # Title
 #-------------------------------------------------------------------------------
-st.markdown("---")
+# st.markdown("---")
 
-st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
-st.markdown("---")
+# st.markdown("---")
 #-------------------------------------------------------------------------------
 #image = Image.open("website/app/Logo.png")
 image = Image.open('../images/Logo.png')
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    st.write(' ')
+    st.write('')
+
+    st.write('')
+
+    st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 with col2:
     st.image(image, width=200)
 
-with col3:
-    st.write(' ')
+#with col3:
+#    st.write(' ')
 st.markdown("---")
 #-------------------------------------------------------------------------------
 #st.markdown("""# EndoGP-T
