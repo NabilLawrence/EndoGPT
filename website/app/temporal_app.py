@@ -207,5 +207,9 @@ if button_clicked:
     st.markdown('Checking the following text:')
     st.markdown(session_state.my_variable)
     hospital_reg = r"\.*FINDINGS:.*"
-    line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
+    #line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
+    #predict(line)
+    line = session_state.my_variable
+    if (re.findall(hospital_reg,session_state.my_variable )):
+        line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
     predict(line)
