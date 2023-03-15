@@ -81,7 +81,7 @@ def scored_gen_findings(string, num_gen):
 
         return max(similarity) - findings_diversity
 
-    def generate_output(real, num_gen)
+    def generate_output(real, num_gen):
         generate_findings(real,num_gen) #outputs a dataframe with num_gen rows with a new column on generated findings
         sample['medical_report?'] = sample.gen_findings.map(single_text) #add a column from classifier
         sample["in_corpus?"] = sample.gen_findings.map(calculate_appearance) #add a column counting number of exact appearance in the original findings
