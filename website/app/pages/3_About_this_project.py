@@ -49,7 +49,7 @@ def main():
 
     st.markdown("""
 
-    - Nabil Lawrence
+    - Nabil Lawrence Jamal
     - Tom Brooks
     - Karim Id-Boufker
     - Oscar Rincon
