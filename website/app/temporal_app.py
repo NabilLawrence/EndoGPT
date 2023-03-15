@@ -212,4 +212,4 @@ if button_clicked:
     line = session_state.my_variable
     if (re.findall(hospital_reg,session_state.my_variable )):
         line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
-    predict(line)
+        predict(line)
