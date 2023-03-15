@@ -20,6 +20,14 @@ import re
 import os
 from PIL import Image
 #-------------------------------------------------------------------------------
+st.set_page_config(
+    page_title="EndoGP-T",
+    page_icon="🚑",
+)
+#-------------------------------------------------------------------------------
+
+
+
 def get_session_state():
     session_state = st.session_state
     if "my_variable" not in session_state:
