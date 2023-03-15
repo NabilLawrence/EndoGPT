@@ -60,14 +60,15 @@ def call_generator(prompt):
     return data
 
 def generate_findings(sample):
-
+    print('function called')
     sample['gen_findings'] = sample.prompt.map(call_generator)
     sample['gen_findings'] = sample.gen_findings.map(lambda x: x[0]['generated_text'].split("FINDINGS:")[1])
 
     return sample
 
-def calculate_appearance(string):
-    data = real['findings'].copy()
+def calculate_appearance(string,data):
+    print('function called')
+    #data = real['findings'].copy()
     total_count = data.str.count(string).sum()
 
     return total_count
@@ -77,12 +78,14 @@ nlp = spacy.load('en_core_web_sm')
 findings_diversity = 0.6
 
 def cosine_similarity(text1, text2):
+
     doc1 = nlp(text1)
     doc2 = nlp(text2)
 
     return doc1.similarity(doc2)
 
 def test_similarity(text, real_findings):
+    print('function called')
     similarity = [cosine_similarity(text, real_text) for real_text in real_findings]
 
     return (max(similarity) - findings_diversity)
@@ -93,13 +96,18 @@ def scored_gen_findings(csv_path, num_gen):
     real = preprocess_real(df)
     real['prompt'] = (real['General Practitioner'] + real['Endoscopist'] + real['Instrument']
                       + 'INDICATIONS FOR PROCEDURE:' + real['Indications'] + 'EXTENT OF EXAM:' + real['Extent of Exam'] + 'FINDINGS:')
-
+    print(real.shape, real.columns)
     sample = real.sample(n = num_gen)
 
     sample = generate_findings(sample)
+    sample["in_corpus?"] = sample.gen_findings.apply(calculate_appearance, args = (real.findings,))
+    print(sample.columns)
+    print(sample.columns)
     sample['medical_report?'] = sample.gen_findings.map(single_text)
-    sample["in_corpus?"] = sample.gen_findings.map(calculate_appearance)
-    sample['similarity'] = sample.gen_findings.apply(test_similarity, args = (real.findings,))
+    print(sample.columns)
+    sample['similarity'] = sample.gen_findings.apply(test_similarity, args = (sample.findings,))
+    print(sample.columns)
+
     output = sample[['Indications','Extent of Exam', 'gen_findings', 'medical_report?','in_corpus?', 'similarity']]
 
 
