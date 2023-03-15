@@ -1,7 +1,5 @@
-#-------------------------------------------------------------------------------
-# Libraries
-#-------------------------------------------------------------------------------
 import streamlit as st
+
 import numpy as np
 import pandas as pd
 import json
@@ -18,8 +16,8 @@ import pandas as pd
 import seaborn as sns
 import re
 import os
-from PIL import Image
-#-------------------------------------------------------------------------------
+
+
 def get_session_state():
     session_state = st.session_state
     if "my_variable" not in session_state:
@@ -27,14 +25,14 @@ def get_session_state():
     return session_state
 
 session_state = get_session_state()
-#-------------------------------------------------------------------------------
+
 @st.cache_data
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained("dmis-lab/biobert-v1.1")
     model = AutoModel.from_pretrained("dmis-lab/biobert-v1.1")
 
     return tokenizer, model
-#-------------------------------------------------------------------------------
+
 def single_text(custom_sentence):
     #filename = '../../model.pkl'
     filename = "website/app/model.pkl"
@@ -51,9 +49,10 @@ def single_text(custom_sentence):
     #-----------------------------------------------------
     preds_prob = loaded_model.predict_proba(np.array(outputs.last_hidden_state[:,0].cpu().numpy()))
     return preds_prob[0][0]
-#-------------------------------------------------------------------------------
+
+
 def endoCall(search_input,gif):
-    API_TOKEN = ""
+    API_TOKEN = "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"
     headers = {"Authorization": f"Bearer {API_TOKEN}"}
     API_URL = "https://api-inference.huggingface.co/models/tombrooks248/EndoGPT"
     def query(payload):
@@ -74,7 +73,7 @@ def endoCall(search_input,gif):
     )
     gif.empty()
     return data
-#-------------------------------------------------------------------------------
+
 # def progress_bar():
 #     progress_text = "Operation in progress. Please wait."
 #     my_bar = st.progress(0, text=progress_text)
@@ -82,7 +81,7 @@ def endoCall(search_input,gif):
     # for percent_complete in range(100):
     #     time.sleep(0.3)
     #     my_bar.progress(percent_complete + 1, text=progress_text)
-#-------------------------------------------------------------------------------
+
 
 data = None
 mr_bean = None
@@ -90,32 +89,22 @@ html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="4
 
 from PIL import Image
 
-#-------------------------------------------------------------------------------
-# Title
-#-------------------------------------------------------------------------------
-st.markdown("---")
 
-st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
-st.markdown("---")
-#-------------------------------------------------------------------------------
+
+st.write(os.getcwd())
+
+#Logo_Path = os.path.abspath("website/app/Logo.png")
+
+#st.write(Logo_Path)
+
 image = Image.open("website/app/Logo.png")
 #image = Image.open('../images/Logo.png')
 
-col1, col2, col3 = st.columns(3)
+st.image(image, width=300)
 
-with col1:
-    st.write(' ')
-
-with col2:
-    st.image(image, width=200)
-
-with col3:
-    st.write(' ')
-st.markdown("---")
-#-------------------------------------------------------------------------------
-#st.markdown("""# EndoGP-T
-#st.markdown("""by Open Medicine""")
+st.markdown("""# EndoGP-T
+    by Open Medicine""")
 
 st.markdown("#### Please generate a medical report")
 
@@ -136,6 +125,9 @@ with st.form("select_box_form"):
        mr_bean = st.markdown(html_string, unsafe_allow_html=True)
        data = endoCall(search_input, mr_bean)
        #data = endoCall(search_input)
+
+
+
 
 
 with st.form("text_form"):
@@ -169,8 +161,6 @@ if data:
 
 #gen_text='cat'
 
-st.markdown("---")
-
 st.markdown("#### Is your medical report realistic? 🤔")
 
 
@@ -194,13 +184,9 @@ def predict(input1):
     else:
         st.markdown('#### Your text :red[probably is not] a medical report 😔')
 
-
-
 if button_clicked:
-    line=''
     st.markdown('Checking the following text:')
-    #st.markdown(session_state.my_variable)
+    st.markdown(session_state.my_variable)
     hospital_reg = r"\.*FINDINGS:.*"
-    if type(session_state.my_variable)==str:
-        line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
+    line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
     predict(line)
