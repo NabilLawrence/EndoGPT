@@ -40,8 +40,6 @@ def main():
     """)
     st.markdown("---")
 
-    st.markdown("---")
-
     st.markdown("### Contributors")
 
     st.markdown("""
