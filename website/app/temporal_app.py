@@ -98,10 +98,23 @@ from PIL import Image
 
 #st.write(Logo_Path)
 
-image = Image.open("website/app/Logo.png")
-#image = Image.open('../images/Logo.png')
+st.markdown("---")
+#-------------------------------------------------------------------------------
+#image = Image.open("website/app/Logo.png")
+image = Image.open('../images/Logo.png')
 
-st.image(image, width=300)
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.write(' ')
+
+with col2:
+    st.image(image, width=200)
+
+with col3:
+    st.write(' ')
+st.markdown("---")
+#-------------------------------------------------------------------------------
 
 st.markdown("""# EndoGP-T
     by Open Medicine""")
