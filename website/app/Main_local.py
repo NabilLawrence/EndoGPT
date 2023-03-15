@@ -30,7 +30,6 @@ st.set_page_config(
 #-------------------------------------------------------------------------------
 
 
-
 def get_session_state():
     session_state = st.session_state
     if "my_variable" not in session_state:
@@ -97,7 +96,11 @@ def endoCall(search_input,gif):
 
 data = None
 mr_bean = None
-html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"</iframe>'
+#html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"</iframe>'
+
+html_string ='''<div style="display:flex; justify-content:center;">
+<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"></iframe>
+</div>'''
 
 from PIL import Image
 st.markdown("---")
@@ -163,7 +166,7 @@ with st.form("text_form"):
         #progress_bar()
         mr_bean = st.markdown(html_string, unsafe_allow_html=True)
         data = endoCall(search_input, mr_bean)
-        data = endoCall(search_input)
+        #data = endoCall(search_input)
 
 
 #gen_text='error'
