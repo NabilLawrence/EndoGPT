@@ -106,7 +106,7 @@ st.image(image, width=300)
 st.markdown("""# EndoGP-T
     by Open Medicine""")
 
-st.markdown("#### Please generate a medical report")
+st.markdown("#### Please generate a medical report ")
 
 search_input = ""
 
