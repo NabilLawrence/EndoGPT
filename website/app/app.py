@@ -40,6 +40,12 @@ def progress_bar():
 
 data = None
 
+from PIL import Image
+
+image = Image.open('../images/Logo.png')
+
+st.image(image, width=300)
+
 st.markdown("""# EndoGP-T
     by Open Medicine""")
 
