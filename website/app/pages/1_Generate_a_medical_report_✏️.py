@@ -7,6 +7,13 @@ import requests
 import time
 import os
 
+#-------------------------------------------------------------------------------
+st.set_page_config(
+    page_title="EndoGP-T",
+    page_icon="✏️",
+)
+#-------------------------------------------------------------------------------
+
 def endoCall(search_input):
     API_TOKEN = "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"
     headers = {"Authorization": f"Bearer {API_TOKEN}"}

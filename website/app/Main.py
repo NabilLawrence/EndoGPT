@@ -92,7 +92,11 @@ def endoCall(search_input,gif):
 
 data = None
 mr_bean = None
-html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"</iframe>'
+#html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"</iframe>'
+
+html_string ='''<div style="display:flex; justify-content:center;">
+<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="480" height="288" frameBorder="0"></iframe>
+</div>'''
 
 from PIL import Image
 
