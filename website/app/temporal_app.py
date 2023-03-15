@@ -89,7 +89,8 @@ html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="4
 from PIL import Image
 
 st.write(os.getcwd())
-image = Image.open('../images/Logo.png')
+image = Image.open('Logo.png')
+#image = Image.open('../images/Logo.png')
 
 st.image(image, width=300)
 
