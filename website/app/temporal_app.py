@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import re
+import os
 
 
 def get_session_state():
@@ -87,6 +88,7 @@ html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="4
 
 from PIL import Image
 
+st.write(os.getcwd())
 image = Image.open('../images/Logo.png')
 
 st.image(image, width=300)
