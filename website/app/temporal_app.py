@@ -90,6 +90,12 @@ html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="4
 from PIL import Image
 
 
+#-------------------------------------------------------------------------------
+# Title
+#-------------------------------------------------------------------------------
+st.markdown("---")
+
+st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 
 #st.write(os.getcwd())
@@ -116,8 +122,8 @@ with col3:
 st.markdown("---")
 #-------------------------------------------------------------------------------
 
-st.markdown("""# EndoGP-T
-    by Open Medicine""")
+#st.markdown("""# EndoGP-T
+#    by Open Medicine""")
 
 st.markdown("#### Please generate a medical report ")
 
