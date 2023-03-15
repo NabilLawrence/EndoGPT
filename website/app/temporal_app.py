@@ -92,7 +92,7 @@ from PIL import Image
 
 
 
-st.write(os.getcwd())
+#st.write(os.getcwd())
 
 #Logo_Path = os.path.abspath("website/app/Logo.png")
 
