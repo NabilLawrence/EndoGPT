@@ -36,8 +36,8 @@ def load_model():
     return tokenizer, model
 #-------------------------------------------------------------------------------
 def single_text(custom_sentence):
-    #filename = '../../model.pkl'
-    filename = "website/app/model.pkl"
+    filename = '../../model.pkl'
+    #filename = "website/app/model.pkl"
     loaded_model = pickle.load(open(filename, 'rb'))
     tokenizer, model = load_model()
     #-----------------------------------------------------
@@ -53,7 +53,7 @@ def single_text(custom_sentence):
     return preds_prob[0][0]
 #-------------------------------------------------------------------------------
 def endoCall(search_input,gif):
-    API_TOKEN = ""
+    API_TOKEN = "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"
     headers = {"Authorization": f"Bearer {API_TOKEN}"}
     API_URL = "https://api-inference.huggingface.co/models/tombrooks248/EndoGPT"
     def query(payload):
@@ -99,8 +99,8 @@ st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsaf
 
 st.markdown("---")
 #-------------------------------------------------------------------------------
-image = Image.open("website/app/Logo.png")
-#image = Image.open('../images/Logo.png')
+#image = Image.open("website/app/Logo.png")
+image = Image.open('../images/Logo.png')
 
 col1, col2, col3 = st.columns(3)
 
@@ -197,7 +197,7 @@ def predict(input1):
 
 
 if button_clicked:
-    line=''
+    line='werqergwthasdafasfasfasfasfasfejty'
     st.markdown('Checking the following text:')
     #st.markdown(session_state.my_variable)
     hospital_reg = r"\.*FINDINGS:.*"
