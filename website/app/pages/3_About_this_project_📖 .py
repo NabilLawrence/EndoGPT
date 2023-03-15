@@ -23,11 +23,11 @@ def main():
     # Open medicine}
     st.markdown("---")
 
-    st.markdown("#### Medical data science unchained")
+    st.markdown("### Medical data science unchained")
 
     st.markdown("---")
 
-    st.markdown("### Objective")
+    st.markdown("### Objectives")
 
     st.markdown("""
     1. Generate Virtual Medical Reports from real data.

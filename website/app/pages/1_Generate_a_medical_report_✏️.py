@@ -103,3 +103,4 @@ if data:
     """
 
     st.markdown(html_str, unsafe_allow_html=True)
+    st.balloons()

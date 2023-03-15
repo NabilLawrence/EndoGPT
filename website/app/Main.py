@@ -180,6 +180,7 @@ with st.form("text_form"):
         #progress_bar()
         mr_bean = st.markdown(html_string, unsafe_allow_html=True)
         data = endoCall(search_input, mr_bean)
+        st.balloons()
         #data = endoCall(search_input)
 
 

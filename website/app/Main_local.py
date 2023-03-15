@@ -184,6 +184,7 @@ if data:
     session_state.my_variable = gen_text
 
     st.markdown(html_str, unsafe_allow_html=True)
+    st.balloons()
 
 #gen_text='cat'
 
