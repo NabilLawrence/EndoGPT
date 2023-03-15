@@ -5,7 +5,7 @@ import pandas as pd
 import json
 import requests
 import time
-
+import os
 
 def endoCall(search_input):
     API_TOKEN = "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"
@@ -42,6 +42,7 @@ data = None
 
 from PIL import Image
 
+st.write(os.getcwd())
 image = Image.open('../images/Logo.png')
 
 st.image(image, width=300)
