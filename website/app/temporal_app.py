@@ -90,30 +90,21 @@ html_string = '<iframe src="https://giphy.com/embed/QBd2kLB5qDmysEXre9" width="4
 from PIL import Image
 
 
-#-------------------------------------------------------------------------------
-# Title
-#-------------------------------------------------------------------------------
-st.markdown("---")
 
-st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
-st.markdown("---")
-#-------------------------------------------------------------------------------
-#image = Image.open("website/app/Logo.png")
-image = Image.open('../images/Logo.png')
+st.write(os.getcwd())
 
-col1, col2, col3 = st.columns(3)
+#Logo_Path = os.path.abspath("website/app/Logo.png")
 
-with col1:
-    st.write(' ')
+#st.write(Logo_Path)
 
-with col2:
-    st.image(image, width=200)
+image = Image.open("website/app/Logo.png")
+#image = Image.open('../images/Logo.png')
 
-with col3:
-    st.write(' ')
-st.markdown("---")
-#-------------------------------------------------------------------------------
+st.image(image, width=300)
+
+st.markdown("""# EndoGP-T
+    by Open Medicine""")
 
 st.markdown("#### Please generate a medical report")
 
