@@ -34,7 +34,8 @@ def load_model():
     return tokenizer, model
 
 def single_text(custom_sentence):
-    filename = '../../model.pkl'
+    #filename = '../../model.pkl'
+    filename = "website/app/model.pkl"
     loaded_model = pickle.load(open(filename, 'rb'))
     tokenizer, model = load_model()
     #-----------------------------------------------------
