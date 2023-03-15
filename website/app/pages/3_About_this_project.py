@@ -34,6 +34,11 @@ def main():
     st.markdown("### Related projects")
 
     st.markdown("""
+
+    - https://github.com/NabilLawrence/EndoGPT
+
+    - https://huggingface.co/tombrooks248/EndoGPT
+
     - https://docs.ropensci.org/EndoMineR/articles/EndoMineR.html
 
     - https://github.com/sebastiz/FakeEndoReports
@@ -43,7 +48,8 @@ def main():
     st.markdown("### Contributors")
 
     st.markdown("""
-    - Nabil Jamal
+
+    - Nabil Lawrence
     - Tom Brooks
     - Karim Id-Boufker
     - Oscar Rincon
