@@ -136,7 +136,7 @@ with col1:
     st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 with col2:
-    st.image(image, width=200)
+    st.image(image, width=150)
 
 #with col3:
 #    st.write(' ')
