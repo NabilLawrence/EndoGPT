@@ -78,7 +78,7 @@ def endoCall(search_input,gif):
                             "do_sample": True,
                             "top_k": 1,
                             "min_length":30,
-                            "max_length":85,
+                            "max_length":80,
                         },
         }
     )
