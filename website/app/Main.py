@@ -33,7 +33,7 @@ def get_session_state():
 
 session_state = get_session_state()
 
-@st.cache_data
+@st.cache_resource
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained("dmis-lab/biobert-v1.1")
     model = AutoModel.from_pretrained("dmis-lab/biobert-v1.1")
@@ -136,7 +136,7 @@ with col1:
     st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 with col2:
-    st.image(image, width=150)
+    st.image(image, width=15)
 
 #with col3:
 #    st.write(' ')

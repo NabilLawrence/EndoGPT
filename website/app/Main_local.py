@@ -38,7 +38,7 @@ def get_session_state():
 
 session_state = get_session_state()
 #-------------------------------------------------------------------------------
-@st.cache_data
+@st.cache_resource
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained("dmis-lab/biobert-v1.1")
     model = AutoModel.from_pretrained("dmis-lab/biobert-v1.1")
@@ -78,7 +78,7 @@ def endoCall(search_input,gif):
                             "do_sample": True,
                             "top_k": 1,
                             "min_length":30,
-                            "max_length":150,
+                            "max_length":100,
                         },
         }
     )
