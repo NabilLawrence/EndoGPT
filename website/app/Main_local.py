@@ -33,7 +33,7 @@ st.set_page_config(
 def get_session_state():
     session_state = st.session_state
     if "my_variable" not in session_state:
-        session_state.my_variable = 0
+        session_state.my_variable = ''
     return session_state
 
 session_state = get_session_state()

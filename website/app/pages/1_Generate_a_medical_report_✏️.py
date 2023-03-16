@@ -30,7 +30,7 @@ def endoCall(search_input):
                             "do_sample": True,
                             "top_k": 1,
                             "min_length":30,
-                            "max_length":150,
+                            "max_length":100,
                         },
         }
     )
