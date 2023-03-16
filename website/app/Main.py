@@ -28,7 +28,7 @@ st.set_page_config(
 def get_session_state():
     session_state = st.session_state
     if "my_variable" not in session_state:
-        session_state.my_variable = 0
+        session_state.my_variable = ''
     return session_state
 
 session_state = get_session_state()
@@ -238,4 +238,5 @@ if button_clicked:
     line = session_state.my_variable
     if (re.findall(hospital_reg,session_state.my_variable )):
         line = re.findall(hospital_reg, session_state.my_variable)[0][10:]
+
     predict(line)

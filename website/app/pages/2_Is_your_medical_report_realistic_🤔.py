@@ -15,7 +15,7 @@ st.set_page_config(
 )
 #-------------------------------------------------------------------------------
 
-@st.cache_data
+@st.cache_resource
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained("dmis-lab/biobert-v1.1")
     model = AutoModel.from_pretrained("dmis-lab/biobert-v1.1")
