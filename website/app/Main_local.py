@@ -114,7 +114,7 @@ st.markdown("---")
 # st.markdown("---")
 #-------------------------------------------------------------------------------
 #image = Image.open("website/app/Logo.png")
-image = Image.open('../images/Logo.png')
+image = Image.open('../images/ENDOGPT LOGO.png')
 
 col1, col2 = st.columns(2)
 
@@ -126,7 +126,7 @@ with col1:
     st.markdown("<h1 style='text-align: center; color: white;'>EndoGP-T</h1>", unsafe_allow_html=True)
 
 with col2:
-    st.image(image, width=200)
+    st.image(image, width=150)
 
 #with col3:
 #    st.write(' ')

@@ -123,8 +123,8 @@ st.markdown("---")
 
 # st.markdown("---")
 #-------------------------------------------------------------------------------
-image = Image.open("website/app/Logo.png")
-#image = Image.open('../images/Logo.png')
+image = Image.open("website/app/ENDOGPT LOGO.png")
+#image = Image.open('../images/Logo.png')#ENDOGPT LOGO.png'
 
 col1, col2 = st.columns(2)
 
