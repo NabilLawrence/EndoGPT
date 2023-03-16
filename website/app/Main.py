@@ -153,7 +153,7 @@ search_input = ""
 with st.form("select_box_form"):
    user_input = st.selectbox(
     'Select an Input',
-    ('INDICATIONS FOR PROCEDURE: Abdominal Pain Nausea and/or Vomiting Other- diarrhoea Extent of Exam:  D2',
+    ('INDICATIONS FOR PROCEDURE: Ongoing reflux symptoms Extent of Exam:  D1 FINDINGS: ',
      'INDICATIONS FOR PROCEDURE: Longstanding history of IDA and high eosinophilis in blood. upper abdo pain /alternatin diarhoea/constipaton Extent of Exam:  D1  FINDINGS: ',
      'INDICATIONS FOR PROCEDURE: Positive coeliac Extent of Exam:  Failed intubation  FINDINGS:'))
 
