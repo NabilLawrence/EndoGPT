@@ -1,8 +1,14 @@
 # Open medicine
+
 Medical data science unchained
 
 ---
+
 ## Related projects
+
+- https://github.com/NabilLawrence/EndoGPT
+
+- https://huggingface.co/tombrooks248/EndoGPT
 
 - https://docs.ropensci.org/EndoMineR/articles/EndoMineR.html
 
@@ -17,3 +23,14 @@ Medical data science unchained
 3. Show proof of concept by generating synthesized Endoscopic reports.
 
 ---
+
+## Contributors
+
+- Nabil Lawrence Jamal
+- Tom Brooks
+- Karim Id-Boufker
+- Oscar Rincon
+- Oliver Giles
+- Andrei Danila
+  
+ ---
