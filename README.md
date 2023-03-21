@@ -1,6 +1,12 @@
-# Open medicine
+# EndoGPT
 
-Medical data science unchained
+---
+
+## Objective
+
+1. Generate Virtual Medical Reports from real data.
+2. Classify if the generated output is fake or not.
+3. Show proof of concept by generating synthesized Endoscopic reports.
 
 ---
 
@@ -16,20 +22,12 @@ Medical data science unchained
 
 ---
 
-## Objective
-
-1. Generate Virtual Medical Reports from real data.
-2. Classify if the generated output is fake or not.
-3. Show proof of concept by generating synthesized Endoscopic reports.
-
----
-
 ## Contributors
 
-- Nabil Lawrence Jamal
+- Nabil Lawrence Jamal 
 - Tom Brooks
 - Karim Id-Boufker
-- Oscar Rincon
+- Oscar Rincon  
 - Oliver Giles
 - Andrei Danila
   
