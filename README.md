@@ -36,5 +36,3 @@ https://nabillawrence-endogpt-websiteappmain-5v2wnl.streamlit.app/
 - Oscar Rincon  
 - Oliver Giles
 - Andrei Danila
-  
- ---
